@@ -63,7 +63,7 @@ button.nav-toggler:hover {
 
 button.nav-close {
     background: url("/assets/img/ic_nav_close.png") 0 0 / 25px 25px;
-    margin: 8px 8px 0 0; 
+    margin: 8px 8px 0 0;
 }
 
 .mobile-nav {
@@ -75,6 +75,7 @@ button.nav-close {
     padding: 24px 1px;
     background: rgba(255, 255, 255, 0.97);
     z-index: 10000;
+
     .nav-link {
         font-family: $headingFont;
         font-size: 14px;
@@ -82,7 +83,7 @@ button.nav-close {
         letter-spacing: 1px;
         line-height: 22px;
         text-transform: uppercase;
-        color: $darkGray;        
+        color: $darkGray;
     }
 }
 
@@ -153,10 +154,12 @@ button.slick-arrow:hover {
     display: none;
 }
 
+$anchorHeight: $navbarHeight - 1;
+
 .anchor {
     display: block;
-    height: $navbarHeight;
-    margin-top: -$navbarHeight;
+    height: $anchorHeight;
+    margin-top: -$anchorHeight;
     visibility: hidden;
 }
 
