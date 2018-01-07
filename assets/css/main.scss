@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700");
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700");
+
+$white: #fff;
+$lightGray: #eceff1;
+$silver: #e5e5e5;
+$gray: #808080;
+$darkGray: #444;
+$black: #000;
+$yellow: #ffff02;
+$blueAsh: #90a4ae;
+$green: #37c871;
+$red: #ff2a2a;
+
+$headingFont: "Montserrat", sans-serif;
+$textFont: "Open Sans", sans-serif;
+
+body, html, button, input, select, textarea, a, p, li, div {
+    font-family: $textFont;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $headingFont;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+section, footer {
+    position: relative;
+    width: 100%;
+}
+
+$navbarHeight: 88px;
+
+button.nav-toggler, button.nav-close {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+button.nav-toggler {
+    position: fixed;
+    right: 24px;
+    top: calc(#{$navbarHeight}/2 - 12px);
+    background: url("/assets/img/ic_nav_toggle.png") 0 0 / 25px 25px;
+    z-index: 1000;
+}
+
+button.nav-toggler:hover {
+    cursor: pointer;
+}
+
+button.nav-close {
+    background: url("/assets/img/ic_nav_close.png") 0 0 / 25px 25px;
+    margin: 8px 8px 0 0; 
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 24px 1px;
+    background: rgba(255, 255, 255, 0.97);
+    z-index: 10000;
+    .nav-link {
+        font-family: $headingFont;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $darkGray;        
+    }
+}
+
+.navbar {
+    height: $navbarHeight;
+    background: $white;
+    border-bottom: 1px solid $lightGray;
+    z-index: 100;
+    justify-content: center;
+
+    a.nav-link, a.btn {
+        font-family: $headingFont;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $darkGray;
+        margin: 2px 8px 0 8px;
+    }
+
+    a.nav-link:hover {
+        color: $black;
+    }
+}
+
+a.btn-outline-dark {
+    border: 1px solid $darkGray;
+}
+
+a.btn-outline-dark:hover {
+    border: 1px solid $black;
+    color: $white;
+    background: $black;
+    cursor: pointer;
+}
+
+button.slick-arrow::before {
+    content: '';
+}
+
+button.slick-arrow {
+    width: 48px;
+    height: 48px;
+    opacity: 0.7;
+}
+
+button.slick-arrow:hover {
+    opacity: 1.0;
+}
+
+@media (max-width: 576px) {
+    button.slick-prev {
+        left: -15px;
+        z-index: 10;
+    }
+
+    button.slick-next {
+        right: -15px;
+    }
+
+    button.slick-arrow {
+        opacity: 1.0;
+    }
+}
+
+.dn {
+    display: none;
+}
+
+.anchor {
+    display: block;
+    height: $navbarHeight;
+    margin-top: -$navbarHeight;
+    visibility: hidden;
+}
+
+.sec-welcome {
+    min-height: 480px;
+    height: calc(90vh - #{$navbarHeight});
+    margin-top: $navbarHeight;
+    background: $white url("/assets/img/bg_tnw_book.jpg") no-repeat right (bottom / 640px) 513px;
+
+    .claim {
+        h1 {
+            font-size: 50px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        ul {
+            padding-left: 24px;
+
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sec-welcome {
+        .claim {
+            h1 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            ul li {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .sec-welcome {
+        .claim {
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            ul li {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.sec-companies {
+    background: $lightGray;
+
+    .comp-logo {
+        outline: none;
+    }
+}
+
+.sec-testimonials {
+    background: $lightGray;
+
+    .testi {
+        position: relative;
+        outline: none;
+    }
+
+    .box {
+        width: 270px;
+        min-height: 320px;
+        padding: 72px 30px 30px 30px;
+        margin: 50px 0 20px;
+        background: $white;
+        border: 1px solid $silver;
+    }
+
+    .avatar {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50px);
+
+        img {
+            border-radius: 50%;
+            border: 2px solid $lightGray;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .message {
+        font-family: $textFont;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    .name {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .role {
+        font-size: 14px;
+    }
+
+    button.slick-prev {
+        background: url("/assets/img/ic_arrow_left.png") no-repeat 0 0 / 48px 48px;
+    }
+
+    button.slick-next {
+        background: url("/assets/img/ic_arrow_right.png") no-repeat 0 0 / 48px 48px;
+    }
+}
+
+.sec-press {
+    color: $white;
+    background: $black;
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+.sec-topics {
+    h2 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-family: $textFont;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.sec-method {
+    background: $lightGray;
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+    .profile {
+        background: $white;
+
+        p.caption {
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        p.bio {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .sec-method {
+        p {
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+}
+
+.sec-coaches {
+    background: $blueAsh;
+    color: $white;
+
+    p {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    p.byline {
+        font-style: italic;
+    }
+
+    .coach {
+        background: $white;
+        color: $black;
+        outline: none;
+        margin: 0 24px;
+
+        .role, .exp, .bio {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .role, .bio {
+            font-weight: 300;
+        }
+    }
+
+    .picture {
+        width: 100%;
+        min-width: 370px;
+
+        img {
+            display: inline-block;
+        }
+    }
+
+    .info {
+        margin-left: 24px;
+    }
+
+    button.slick-prev {
+        background: url("/assets/img/ic_arrow_left_white.png") no-repeat 0 0 / 48px 48px;
+    }
+
+    button.slick-next {
+        background: url("/assets/img/ic_arrow_right_white.png") no-repeat 0 0 / 48px 48px;
+    }
+
+    .slick-dots li button:before, .slick-dots li.slick-active button:before {
+        color: $white;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sec-coaches {
+        .picture {
+            width: 20%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .sec-coaches {
+        .coach {
+            margin: 0 8px;
+
+            .role, .exp, .bio {
+                font-size: 16px;
+            }
+        }
+
+        .picture {
+            width: 100%;
+            min-width: 0;
+
+            img {
+                width: 90%;
+                height: 90%;
+            }
+        }
+    }
+}
+
+.sec-contact {
+    color: $white;
+    background: $black;
+
+    .caption {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .heading {
+        margin: 2px 0 42px;
+        font-family: $headingFont;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    input:focus, select:focus {
+        border-color: $blueAsh;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        font-weight: 700;
+        padding: 16px 24px;
+        text-transform: uppercase;
+        color: $black;
+        background: $yellow;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        color: $black;
+        background: $white;
+        cursor: pointer;
+    }
+
+    .with-errors ul li, div.with-errors {
+        font-size: 12px;
+        color: $red;
+        margin-top: 4px;
+    }
+
+    .alert {
+        background: none;
+        border-radius: 0;
+    }
+
+    .alert-success {
+        color: $green;
+        border: 2px solid $green;
+    }
+
+    .alert-danger {
+        color: $red;
+        border: 2px solid $red;
+    }
+}
+
+.footer {
+    color: $white;
+    background: $black;
+    font-size: 14px;
+    color: $darkGray;
+
+    a {
+        color: $silver;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $white;
+    }
+
+    span.credit a, span.credit a:hover {
+        color: $darkGray;
+    }
+}
+
+@import "spinner";
