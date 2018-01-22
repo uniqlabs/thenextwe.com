@@ -145,7 +145,8 @@ button.slick-arrow:hover {
   min-height: 480px;
   height: calc(90vh - 88px);
   margin-top: 88px;
-  background: #fff url("/assets/img/bg_tnw_book.jpg") no-repeat right bottom/640px 513px;
+  background: #fff url("/assets/img/bg_tnw_book.jpg") no-repeat right bottom;
+  background-size: 45% auto;
 }
 
 .sec-welcome .claim h1 {
@@ -168,6 +169,9 @@ button.slick-arrow:hover {
 }
 
 @media (max-width: 768px) {
+  .sec-welcome {
+    background-size: 50% auto;
+  }
   .sec-welcome .claim h1 {
     font-size: 36px;
   }
@@ -180,6 +184,9 @@ button.slick-arrow:hover {
 }
 
 @media (max-width: 576px) {
+  .sec-welcome {
+    background-size: 60% auto;
+  }
   .sec-welcome .claim h1 {
     font-size: 30px;
   }
