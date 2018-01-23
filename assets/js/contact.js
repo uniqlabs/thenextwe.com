@@ -45,6 +45,7 @@ $(document).ready(function () {
         }
         var res = data.result.result;
         if (res === 'success') {
+            trackEvent();
             showThanks();
             return;
         }
@@ -85,6 +86,13 @@ $(document).ready(function () {
             $btnSpinner.fadeOut();
             $btnText.fadeIn();
         }
+    }
+
+    function trackEvent() {
+        dataLayer.push({
+            'formular': 'erfolgreich_verschickt',
+            'event': 'TheNextWe_form'
+        });
     }
 
     function showThanks() {
