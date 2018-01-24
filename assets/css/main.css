@@ -22,6 +22,15 @@ section, footer {
   width: 100%;
 }
 
+button, input, select, .btn, .form-control {
+  border-radius: 0;
+  outline: none;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 button.nav-toggler, button.nav-close {
   width: 25px;
   height: 25px;
@@ -101,6 +110,20 @@ a.btn-outline-dark:hover {
   color: #fff;
   background: #000;
   cursor: pointer;
+}
+
+a.btn-cta {
+  border: 2px solid #ffff02;
+  background: #ffff02;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 16px;
+}
+
+a.btn-cta:hover {
+  background: transparent;
 }
 
 button.slick-arrow::before {
@@ -464,6 +487,32 @@ button.slick-arrow:hover {
 .sec-contact .alert-danger {
   color: #ff2a2a;
   border: 2px solid #ff2a2a;
+}
+
+.sec-cta h2 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 30px;
+}
+
+.sec-cta.cta-1 {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background: #90a4ae;
+}
+
+.sec-cta.cta-1 .btn-cta:hover {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.sec-cta.cta-2 {
+  background: #fff;
+}
+
+.sec-cta.cta-2 .btn-cta:hover {
+  border: 2px solid #000;
+  color: #000;
 }
 
 .footer {

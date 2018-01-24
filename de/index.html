@@ -329,6 +329,19 @@
     </div>
 </section>
 
+<section class="sec-cta cta-1 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex flex-column flex-lg-row align-items-center">
+                <h2 class="text-lg-right">Bereit für Wandel?</h2>
+                <p class="mx-lg-5 my-3">Egal ob Digitalisierung, Umsatzwachstum oder Kostendruck - wir unterstützen Sie und Ihre  Mitarbeiter, neue Ergebnisse durch ein neues Mindset zu erreichen. Lassen Sie sich in einem kostenfreien Erstgespräch telefonisch beraten.
+</p>
+                <a class="btn btn-cta" href="#kontakt">Gespräch anfordern</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <span id="methode" class="anchor"></span>
 <section class="sec-method py-5">
     <div class="container">
@@ -370,6 +383,19 @@
             <div class="col-md-5 mr-md-auto">
                 <h2>Dr. Klaas Klasing</h2>
                 <p class="bio"><b>Dr. Klaas Klasing</b> kam als CTO an Bord, um den Coaching-Prozess zu digitalisieren und so skalierbar zu machen. Coaches aus ganz Deutschland begleiten die Klienten von TheNextWe digital, so dass keine Reisezeit und -kosten entstehen. Coach und Klient kommunizieren per Chat und am Telefon, um so in 12 Wochen ein bestimmtes Ziel zu erreichen. Die digitale Begleitung ermöglicht durchgängigen Zugang zum Coach. Das ist besonders wichtig, weil die Ergebnisse und Erkenntnisse aus den Coachings nach den Gesprächen bei der Umsetzung im Tagesgeschäft eintreten.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sec-cta cta-2 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex flex-column flex-lg-row align-items-center">
+                <h2 class="text-lg-right">Bereit für Entwicklung?</h2>
+                <p class="mx-lg-5 my-3">Egal ob Filialleiter, Regionalleiter oder CEO - wir unterstützen die Weiterenwicklung Ihrer Mitarbeiter mit geschulten Leadership Coaches und maßgeschneiderten Programmen. Lassen  Sie sich in einem kostenfreien Erstgespräch telefonisch beraten.
+</p>
+                <a class="btn btn-cta" href="#kontakt">Gespräch anfordern</a>
             </div>
         </div>
     </div>
@@ -475,25 +501,29 @@
                     <input type="hidden" name="from_url" id="from_url" value="yes">
                     <input type="hidden" name="hdn_email_txt" id="hdn_email_txt" value="">
                     <input type="hidden" name="req_hid" id="req_hid" value="~Captcha~FIRSTNAME~NAME~COMPANY~TOPIC">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="FIRSTNAME" id="FIRSTNAME" data-minlength="2" data-error="Bitte geben Sie einen Vornamen mit mindestens 2 Buchstaben ein."
-                            placeholder="Vorname" required>
-                        <div class="help-block with-errors"></div>
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="form-group flex-1 mr-md-1">
+                            <input type="text" class="form-control" name="FIRSTNAME" id="FIRSTNAME" data-minlength="2" data-error="Mindestens 2 Buchstaben, bitte."
+                                placeholder="Vorname" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group flex-1 ml-md-1">
+                            <input type="text" class="form-control" name="NAME" id="NAME" data-minlength="2" data-error="Mindestens 2 Buchstaben, bitte." placeholder="Nachname"
+                                required>
+                            <div class="help-block with-errors"></div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="NAME" id="NAME" data-minlength="2" data-error="Bitte geben sie einen Nachnamen mit mindestens 2 Buchstaben ein." placeholder="Nachname"
-                            required>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" name="email" id="email" data-error="Bitte geben Sie eine gültige E-Mail-Adresse ein." placeholder="E-Mail-Adresse"
-                            required>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="COMPANY" id="COMPANY" data-minlength="1" data-error="Bitte geben Sie einen Firmennamen ein."
-                            placeholder="Firma" required>
-                        <div class="help-block with-errors"></div>
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="form-group flex-1 mr-md-1">
+                            <input type="email" class="form-control" name="email" id="email" data-error="Eine gültige E-Mail-Adresse, bitte." placeholder="E-Mail-Adresse"
+                                required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group flex-1 ml-md-1">
+                            <input type="text" class="form-control" name="COMPANY" id="COMPANY" data-minlength="1" data-error="Geben Sie einen Firmennamen ein."
+                                placeholder="Firma" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <select name="TOPIC" id="TOPIC" class="form-control" data-select="true" data-error="Bitte wählen Sie ein Thema." required>
