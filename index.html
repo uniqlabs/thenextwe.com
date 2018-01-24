@@ -18,9 +18,13 @@
 
 <body>
     <script>
+        var lang = navigator.language || navigator.userLanguage;
         var s = window.location.search;
         var h = window.location.hash;
-        window.location = '/de/' + s + h;
+        if (lang.indexOf('de') == 0)
+            window.location = '/de/' + s + h;
+        else
+            window.location = '/en/' + s + h;
     </script>
 </body>
 
