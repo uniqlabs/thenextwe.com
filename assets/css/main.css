@@ -535,6 +535,18 @@ button.slick-arrow:hover {
   color: #444;
 }
 
+.social-icon {
+  filter: grayscale(100%);
+  margin-right: 8px;
+  opacity: 0.5;
+  transition: all 600ms;
+}
+
+.social-icon:hover {
+  filter: grayscale(0);
+  opacity: 1.0;
+}
+
 .spinner {
   position: absolute;
   top: 18px;

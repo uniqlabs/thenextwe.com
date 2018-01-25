@@ -580,4 +580,16 @@ $anchorHeight: $navbarHeight - 1;
     }
 }
 
+.social-icon {
+    filter: grayscale(100%);
+    margin-right: 8px;
+    opacity: 0.5;
+    transition: all 600ms;
+}
+
+.social-icon:hover {
+    filter: grayscale(0);
+    opacity: 1.0;
+}
+
 @import "spinner";
