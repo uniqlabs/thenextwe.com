@@ -27,6 +27,11 @@ button, input, select, .btn, .form-control {
   outline: none;
 }
 
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -431,13 +436,17 @@ button.slick-arrow:hover {
   background: #000;
 }
 
+.sec-contact .contact-form {
+  max-width: 540px;
+}
+
 .sec-contact .caption {
   font-size: 18px;
   font-weight: 700;
 }
 
 .sec-contact .heading {
-  margin: 2px 0 42px;
+  margin: 2px 0 40px;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 600;
@@ -448,29 +457,45 @@ button.slick-arrow:hover {
   line-height: 26px;
 }
 
+.sec-contact .form-group {
+  margin: 4px 0;
+}
+
+.sec-contact input, .sec-contact select {
+  font-size: 13px;
+  background: #e5e5e5;
+  border: none;
+}
+
+.sec-contact input {
+  padding: 12px 8px;
+}
+
 .sec-contact input:focus, .sec-contact select:focus {
   border-color: #90a4ae;
 }
 
-.sec-contact .btn-primary {
+.sec-contact .btn-primary, .sec-contact .btn-primary {
   font-size: 14px;
   font-weight: 700;
-  padding: 16px 24px;
+  padding: 12px 24px;
+  margin-top: 8px;
   text-transform: uppercase;
   color: #000;
   background: #ffff02;
-  border: none;
+  border: 2px solid #ffff02;
+  opacity: 1 !important;
 }
 
 .sec-contact .btn-primary:hover {
-  color: #000;
-  background: #fff;
+  color: #ffff02;
+  background: transparent;
   cursor: pointer;
 }
 
 .sec-contact .with-errors ul li, .sec-contact div.with-errors {
   font-size: 12px;
-  color: #ff2a2a;
+  color: #90a4ae;
   margin-top: 4px;
 }
 
@@ -487,6 +512,17 @@ button.slick-arrow:hover {
 .sec-contact .alert-danger {
   color: #ff2a2a;
   border: 2px solid #ff2a2a;
+}
+
+.sec-contact #gcaptcha {
+  transform: scale(0.8);
+}
+
+@media (max-width: 767px) {
+  #gcaptcha {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
 }
 
 .sec-cta h2 {

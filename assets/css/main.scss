@@ -43,6 +43,11 @@ button, input, select, .btn, .form-control {
     outline: none;
 }
 
+select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+
 .flex-1 {
     flex: 1;
 }
@@ -475,13 +480,17 @@ $anchorHeight: $navbarHeight - 1;
     color: $white;
     background: $black;
 
+    .contact-form {
+        max-width: 540px;
+    }
+
     .caption {
         font-size: 18px;
         font-weight: 700;
     }
 
     .heading {
-        margin: 2px 0 42px;
+        margin: 2px 0 40px;
         font-family: $headingFont;
         font-size: 30px;
         font-weight: 600;
@@ -492,29 +501,45 @@ $anchorHeight: $navbarHeight - 1;
         line-height: 26px;
     }
 
+    .form-group {
+        margin: 4px 0;
+    }
+
+    input, select {
+        font-size: 13px;
+        background: $silver;
+        border: none;
+    }
+
+    input {
+        padding: 12px 8px;
+    }
+
     input:focus, select:focus {
         border-color: $blueAsh;
     }
 
-    .btn-primary {
+    .btn-primary, .btn-primary {
         font-size: 14px;
         font-weight: 700;
-        padding: 16px 24px;
+        padding: 12px 24px;
+        margin-top: 8px;
         text-transform: uppercase;
         color: $black;
         background: $yellow;
-        border: none;
+        border: 2px solid $yellow;
+        opacity: 1 !important;
     }
 
     .btn-primary:hover {
-        color: $black;
-        background: $white;
+        color: $yellow;
+        background: transparent;
         cursor: pointer;
     }
 
     .with-errors ul li, div.with-errors {
         font-size: 12px;
-        color: $red;
+        color: $blueAsh;
         margin-top: 4px;
     }
 
@@ -532,6 +557,17 @@ $anchorHeight: $navbarHeight - 1;
         color: $red;
         border: 2px solid $red;
     }
+
+    #gcaptcha {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 767px) {
+    #gcaptcha {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
 }
 
 .sec-cta {
@@ -546,18 +582,20 @@ $anchorHeight: $navbarHeight - 1;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
     color: $white;
     background: $blueAsh;
+
     .btn-cta:hover {
         border: 2px solid $white;
-        color: $white;    
+        color: $white;
     }
 }
 
 .sec-cta.cta-2 {
     background: $white;
+
     .btn-cta:hover {
         border: 2px solid $black;
-        color: $black;    
-    }    
+        color: $black;
+    }
 }
 
 .footer {
