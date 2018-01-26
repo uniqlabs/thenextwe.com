@@ -468,11 +468,11 @@
 </section>
 
 <script>
-    //if (location.hostname !== 'localhost') {
-    var s = document.createElement('script');
-    s.setAttribute('src', 'https://www.google.com/recaptcha/api.js?onload=renderCaptcha&render=explicit&hl=de');
-    document.body.appendChild(s);
-    //}
+    if (location.hostname !== 'localhost') {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://www.google.com/recaptcha/api.js?onload=renderCaptcha&render=explicit&hl=de');
+        document.body.appendChild(s);
+    }
 </script>
 
 <section class="sec-contact py-5">
