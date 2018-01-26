@@ -490,10 +490,11 @@ $anchorHeight: $navbarHeight - 1;
     }
 
     .heading {
-        margin: 2px 0 40px;
+        margin: 2px 0 44px 0;
         font-family: $headingFont;
         font-size: 30px;
         font-weight: 600;
+        line-height: 1.2;
     }
 
     p {

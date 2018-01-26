@@ -446,10 +446,11 @@ button.slick-arrow:hover {
 }
 
 .sec-contact .heading {
-  margin: 2px 0 40px;
+  margin: 2px 0 44px 0;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .sec-contact p {
