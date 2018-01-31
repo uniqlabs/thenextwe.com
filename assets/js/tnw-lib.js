@@ -72,6 +72,6 @@ var renderCaptcha = function () {
 };
 
 var onCaptchaSolved = function () {
-    $('div#contact-form-gcaptcha').data('valid', true);
-    $('#contact-form .with-errors.captcha').slideUp();
+    $('.gcaptcha').data('valid', true);
+    $('.with-errors.captcha').slideUp();
 };
