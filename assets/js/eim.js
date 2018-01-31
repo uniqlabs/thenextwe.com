@@ -69,7 +69,7 @@ $(document).ready(function () {
     }
 
     function validateCaptcha() {
-        var res = grecaptcha.getResponse();
+        var res = grecaptcha.getResponse($captcha.data('captchaId'));
         if (!res.length) {
             $captchaErr.slideDown();
             return false;

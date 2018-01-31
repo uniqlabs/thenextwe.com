@@ -63,11 +63,12 @@ var renderCaptcha = function () {
     var $gcaptchas = $('.gcaptcha');
     if (!$gcaptchas.length) return;
     $gcaptchas.each(function () {
-        grecaptcha.render(this, {
+        var id = grecaptcha.render(this, {
             'sitekey': r('6YrjIQ8HNNNNNXKVNiMS3IOLbtb41qtdfrFXU8tX'),
             'theme': $(this).hasClass('dark') ? 'dark' : 'light',
             'callback': onCaptchaSolved
         });
+        $(this).data('captchaId', id);
     })
 };
 
