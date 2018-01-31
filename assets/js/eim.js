@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    var formId = '#contact-form';
+    var $document = $(document);
+    var $eim = $('.eim-modal');
+    var formId = '#eim-form';
     var $form = $(formId);
     var $inputs = $(formId + ' :input');
     var $selects = $(formId + ' select');
     var $email = $(formId + ' .email');
-    var $topic = $(formId + ' .topic-selector');
-    var $topicErr = $(formId + ' .with-errors.topic');
     var $captcha = $(formId + ' .gcaptcha');
     var $captchaErr = $(formId + ' .with-errors.captcha');
     var $btn = $(formId + ' .btn-submit');
@@ -15,17 +15,25 @@ $(document).ready(function () {
     var $thanks = $(formId + ' .alert-success');
 
     function init() {
-        $form.validator().on('submit', sendContactRequest);
-        $topic.on('change', validateTopic);
-        createCaptcha();
+        initEIM();
     }
 
-    function sendContactRequest(event) {
+    function initEIM() {
+        initExitIntentModal($document, showEIM);
+        $eim.on('hidden.bs.modal', switchOffEIM);
+    }
+
+    function showEIM() {
+        $eim.modal({ backdrop: true, show: true });
+        createCaptcha();
+        $form.validator().on('submit', sendWhitepaperRequest);
+    }
+
+    function sendWhitepaperRequest(event) {
         if (event.isDefaultPrevented()) return;
         event.preventDefault();
-        if (!validateTopic()) return;
         if (!validateCaptcha()) return;
-        var url = r('uggcf://zl.fraqvaoyhr.pbz/hfref/fhofpevorrzorq/wf_vq/2ldcb/vq/3');
+        var url = r('uggcf://zl.fraqvaoyhr.pbz/hfref/fhofpevorrzorq/wf_vq/2ldcb/vq/4');
         var data = $form.serialize();
         hideError();
         setBusy(true);
@@ -48,6 +56,7 @@ $(document).ready(function () {
         }
         var res = data.result.result;
         if (res === 'success') {
+            switchOffEIM(7);
             trackEvent();
             showThanks();
             return;
@@ -57,17 +66,6 @@ $(document).ready(function () {
         else if (res === 'invalidCaptcha')
             msg = $captcha.data('invalid');
         showError(msg);
-    }
-
-    function validateTopic() {
-        var topic = $topic.val();
-        if (topic == 0) {
-            $topicErr.slideDown();
-            return false;
-        } else {
-            $topicErr.slideUp();
-            return true;
-        }
     }
 
     function validateCaptcha() {
@@ -93,7 +91,7 @@ $(document).ready(function () {
 
     function trackEvent() {
         dataLayer.push({
-            'event': 'tnw_contact_form',
+            'event': 'tnw_eim_form',
             'status': 'submitted'
         });
     }
