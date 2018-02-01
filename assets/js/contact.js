@@ -97,7 +97,7 @@ $(document).ready(function () {
             'status': 'submitted'
         });
     }
-
+    
     function showThanks() {
         $thanks.show();
         $inputs.hide();

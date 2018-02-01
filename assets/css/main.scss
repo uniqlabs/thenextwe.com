@@ -7,7 +7,7 @@ $lightGray: #eceff1;
 $silver: #e5e5e5;
 $gray: #808080;
 $darkGray: #444;
-$blackShadow: rgba(0, 0, 0, 0.1);
+$blackShadow: rgba(0, 0, 0, 0.15);
 $black: #000;
 $yellow: #ffff02;
 $blueAsh: #90a4ae;
@@ -50,7 +50,8 @@ select {
 }
 
 img.shadow {
-    box-shadow: 4px 4px 6px $blackShadow, -1px -1px 1px $blackShadow;
+    border: 1px solid $silver;
+    box-shadow: 4px 4px 10px $blackShadow;
 }
 
 .flex-1 {
@@ -119,7 +120,6 @@ button.nav-close {
         transform: scale(1);
     }
 }
-
 
 .mobile-nav {
     display: none;
@@ -578,7 +578,6 @@ $anchorHeight: $navbarHeight - 1;
         background: transparent;
         cursor: pointer;
     }
-
 }
 
 .sec-cta {
