@@ -41,7 +41,7 @@ $(document).ready(function () {
 
     function onReqSuccess(data) {
         setBusy(false);
-        var msg = 'Unbekannter Fehler';
+        var msg = $form.data('unknown-err');
         if (!data || !data.result || !data.result.result) {
             showError(msg);
             return;

@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     function onReqSuccess(data) {
         setBusy(false);
-        var msg = 'Unbekannter Fehler';
+        var msg = $form.data('unknown-err');
         if (!data || !data.result || !data.result.result) {
             showError(msg);
             return;
@@ -91,7 +91,7 @@ $(document).ready(function () {
 
     function trackEvent() {
         dataLayer.push({
-            'event': 'tnw_eim_form',
+            'event': 'tnw_whitepaper_form',
             'status': 'submitted'
         });
     }
