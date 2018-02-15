@@ -6,8 +6,6 @@ $(document).ready(function () {
     var $email = $(formId + ' .email');
     var $topic = $(formId + ' .topic-selector');
     var $topicErr = $(formId + ' .with-errors.topic');
-    var $captcha = $(formId + ' .gcaptcha');
-    var $captchaErr = $(formId + ' .with-errors.captcha');
     var $btn = $(formId + ' .btn-submit');
     var $btnSpinner = $(formId + ' .btn-submit .spinner');
     var $btnText = $(formId + ' .btn-submit .text');
@@ -17,14 +15,12 @@ $(document).ready(function () {
     function init() {
         $form.validator().on('submit', sendContactRequest);
         $topic.on('change', validateTopic);
-        createCaptcha();
     }
 
     function sendContactRequest(event) {
         if (event.isDefaultPrevented()) return;
         event.preventDefault();
         if (!validateTopic()) return;
-        if (!validateCaptcha()) return;
         var url = r('uggcf://zl.fraqvaoyhr.pbz/hfref/fhofpevorrzorq/wf_vq/2ldcb/vq/3');
         var data = $form.serialize();
         hideError();
@@ -54,8 +50,6 @@ $(document).ready(function () {
         }
         if (res === 'emailExist')
             msg = $email.data('exists');
-        else if (res === 'invalidCaptcha')
-            msg = $captcha.data('invalid');
         showError(msg);
     }
 
@@ -68,15 +62,6 @@ $(document).ready(function () {
             $topicErr.slideUp();
             return true;
         }
-    }
-
-    function validateCaptcha() {
-        var res = grecaptcha.getResponse($captcha.data('captchaId'));
-        if (!res.length) {
-            $captchaErr.slideDown();
-            return false;
-        }
-        return true;
     }
 
     function setBusy(b) {
@@ -102,7 +87,6 @@ $(document).ready(function () {
         $thanks.show();
         $inputs.hide();
         $selects.hide();
-        $captcha.hide();
         $btn.hide();
     }
 

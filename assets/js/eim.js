@@ -6,8 +6,6 @@ $(document).ready(function () {
     var $inputs = $(formId + ' :input');
     var $selects = $(formId + ' select');
     var $email = $(formId + ' .email');
-    var $captcha = $(formId + ' .gcaptcha');
-    var $captchaErr = $(formId + ' .with-errors.captcha');
     var $btn = $(formId + ' .btn-submit');
     var $btnSpinner = $(formId + ' .btn-submit .spinner');
     var $btnText = $(formId + ' .btn-submit .text');
@@ -25,14 +23,12 @@ $(document).ready(function () {
 
     function showEIM() {
         $eim.modal({ backdrop: true, show: true });
-        createCaptcha();
         $form.validator().on('submit', sendWhitepaperRequest);
     }
 
     function sendWhitepaperRequest(event) {
         if (event.isDefaultPrevented()) return;
         event.preventDefault();
-        if (!validateCaptcha()) return;
         var url = r('uggcf://zl.fraqvaoyhr.pbz/hfref/fhofpevorrzorq/wf_vq/2ldcb/vq/4');
         var data = $form.serialize();
         hideError();
@@ -63,18 +59,7 @@ $(document).ready(function () {
         }
         if (res === 'emailExist')
             msg = $email.data('exists');
-        else if (res === 'invalidCaptcha')
-            msg = $captcha.data('invalid');
         showError(msg);
-    }
-
-    function validateCaptcha() {
-        var res = grecaptcha.getResponse($captcha.data('captchaId'));
-        if (!res.length) {
-            $captchaErr.slideDown();
-            return false;
-        }
-        return true;
     }
 
     function setBusy(b) {
@@ -100,7 +85,6 @@ $(document).ready(function () {
         $thanks.show();
         $inputs.hide();
         $selects.hide();
-        $captcha.hide();
         $btn.hide();
     }
 

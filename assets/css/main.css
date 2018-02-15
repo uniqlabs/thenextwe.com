@@ -54,8 +54,12 @@ button.nav-toggler {
   position: fixed;
   right: 24px;
   top: calc(88px/2 - 12px);
-  background: url("/assets/img/ic_nav_toggle.png") 0 0/25px 25px;
+  background: url("/assets/img/ic_nav_toggles.png") no-repeat 0 0/25px 50px;
   z-index: 1000;
+}
+
+button.nav-toggler.white {
+  background-position: 0 -25px;
 }
 
 button.nav-toggler:hover {
@@ -129,6 +133,14 @@ button.nav-close {
   border-bottom: 1px solid #eceff1;
   z-index: 100;
   justify-content: center;
+  transition: all 400ms;
+}
+
+.navbar .logo {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: url("/assets/img/tnw_logos.png") no-repeat 0 0/200px 80px;
 }
 
 .navbar a.nav-link, .navbar a.btn {
@@ -157,7 +169,34 @@ a.btn-outline-dark:hover {
   cursor: pointer;
 }
 
-a.btn-cta {
+.navbar.transparent {
+  background: transparent;
+  border: none;
+}
+
+.navbar.transparent .logo {
+  background-position: 0 -40px;
+}
+
+.navbar.transparent a.nav-link, .navbar.transparent a.btn {
+  color: #eceff1;
+}
+
+.navbar.transparent a.nav-link:hover {
+  color: #fff;
+}
+
+.navbar.transparent a.btn-outline-dark {
+  border: 1px solid #eceff1;
+}
+
+.navbar.transparent a.btn-outline-dark:hover {
+  border: 1px solid #fff;
+  color: #000;
+  background: #fff;
+}
+
+a.btn-cta, .btn-submit {
   border: 2px solid #ffff02;
   background: #ffff02;
   color: #000;
@@ -167,7 +206,7 @@ a.btn-cta {
   padding: 16px;
 }
 
-a.btn-cta:hover {
+a.btn-cta:hover, .btn-submit:hover {
   background: transparent;
 }
 
@@ -210,17 +249,13 @@ button.slick-arrow:hover {
 }
 
 .sec-welcome {
-  min-height: 480px;
-  height: calc(90vh - 88px);
-  margin-top: 88px;
-  background: #fff url("/assets/img/bg_tnw_book.jpg") no-repeat right bottom;
-  background-size: 45% auto;
+  min-height: 568px;
+  height: 90vh;
 }
 
 .sec-welcome .claim h1 {
   font-size: 50px;
   line-height: 1.1;
-  margin-bottom: 24px;
 }
 
 .sec-welcome .claim p {
@@ -236,38 +271,174 @@ button.slick-arrow:hover {
   font-size: 18px;
 }
 
+.sec-welcome .caption {
+  width: 100%;
+  height: 32px;
+  border-bottom: 2px solid #fff;
+}
+
+.sec-main {
+  background: #fff url("/assets/img/bg_tnw_book.jpg") no-repeat right bottom;
+  background-size: 45% auto;
+}
+
 @media (max-width: 768px) {
-  .sec-welcome {
+  .sec-main {
     background-size: 50% auto;
   }
-  .sec-welcome .claim h1 {
+  .sec-main .claim h1 {
     font-size: 36px;
   }
-  .sec-welcome .claim p {
+  .sec-main .claim p {
     font-size: 20px;
   }
-  .sec-welcome .claim ul li {
+  .sec-main .claim ul li {
     font-size: 16px;
   }
 }
 
 @media (max-width: 576px) {
-  .sec-welcome {
+  .sec-main {
     background-size: 60% auto;
   }
-  .sec-welcome .claim h1 {
+  .sec-main .claim h1 {
     font-size: 30px;
   }
-  .sec-welcome .claim p {
+  .sec-main .claim p {
     font-size: 18px;
   }
-  .sec-welcome .claim ul li {
+  .sec-main .claim ul li {
     font-size: 16px;
+  }
+}
+
+.sec-lp-1 {
+  height: 100vh;
+  background: url("/assets/img/tnw_cover_01.jpg") no-repeat right bottom;
+  background-size: cover;
+  color: #fff;
+}
+
+.sec-lp-1 .claim h1 {
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+.sec-lp-1 .claim ul {
+  list-style: none;
+}
+
+.sec-lp-1 .claim ul li {
+  position: relative;
+  font-size: 24px;
+  margin: 0 0 12px 12px;
+}
+
+.sec-lp-1 .claim ul li::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  left: -34px;
+  width: 24px;
+  height: 24px;
+  background: url("/assets/img/ic_check_white.png") no-repeat 0 0/24px 24px;
+}
+
+.sec-lp-1 .btn-cta {
+  font-size: 16px;
+}
+
+.sec-lp-1 .btn-cta:hover {
+  color: #ffff02;
+}
+
+@media (max-width: 767px) {
+  .sec-lp-1 .claim h1 {
+    font-size: 28px;
+  }
+  .sec-lp-1 .claim ul li {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sec-lp-1 .claim h1 {
+    font-size: 24px;
+  }
+  .sec-lp-1 .claim ul li {
+    font-size: 18px;
+  }
+  .sec-lp-1 .press-logos img {
+    width: 72px;
+    height: 54px;
+  }
+}
+
+.sec-advantages h1 {
+  line-height: 1.1;
+}
+
+.sec-advantages p {
+  font-size: 20px;
+}
+
+.sec-advantages .caption {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sec-advantages ul {
+  list-style: none;
+}
+
+.sec-advantages ul li {
+  position: relative;
+  line-height: 1.2;
+  margin: 0 0 12px 12px;
+}
+
+.sec-advantages ul li::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: -4px;
+  left: -32px;
+  width: 24px;
+  height: 24px;
+  background: url("/assets/img/ic_check_black.png") no-repeat 0 0/24px 24px;
+}
+
+@media (max-width: 767px) {
+  .sec-advantages h1 {
+    font-size: 24px;
+  }
+  .sec-advantages p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sec-advantages h1 {
+    font-size: 20px;
+  }
+  .sec-advantages p {
+    font-size: 16px;
+  }
+  .sec-advantages ul li {
+    font-size: 14px;
   }
 }
 
 .sec-companies {
   background: #eceff1;
+}
+
+.sec-companies .byline {
+  font-size: 20px;
+  color: #bbb;
 }
 
 .sec-companies .comp-logo {
@@ -538,6 +709,61 @@ button.slick-arrow:hover {
   text-transform: uppercase;
   line-height: 1.1;
   font-size: 30px;
+}
+
+.sec-cta.slim-contact {
+  background: #fff;
+}
+
+.sec-cta.slim-contact .bt {
+  border-top: 1px solid #e5e5e5;
+}
+
+.sec-cta.slim-contact p {
+  margin-bottom: 0;
+}
+
+.sec-cta.slim-contact .phone {
+  font-size: 24px;
+}
+
+.sec-cta.slim-contact .phone::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  top: 7px;
+  left: -4px;
+  background: url("/assets/img/ic_phone.png") no-repeat 0 0/32px 32px;
+}
+
+.sec-cta.slim-contact .caption {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sec-cta.slim-contact .form-group {
+  margin: 2px 0;
+}
+
+.sec-cta.slim-contact input, .sec-cta.slim-contact select {
+  font-size: 13px;
+  background: #f4f6f7;
+  border: none;
+}
+
+.sec-cta.slim-contact input {
+  padding: 19px 8px 18px;
+}
+
+.sec-cta.slim-contact .btn-submit {
+  opacity: 1 !important;
+}
+
+.sec-cta.slim-contact .btn-submit:hover {
+  border: 2px solid #000;
+  color: #000;
 }
 
 .sec-cta.cta-1 {
