@@ -11,6 +11,7 @@ $(document).ready(function () {
     var $btnText = $(formId + ' .btn-submit .text');
     var $errMsg = $(formId + ' .alert-danger');
     var $thanks = $(formId + ' .alert-success');
+    var modalCreated = false;
 
     function init() {
         initEIM();
@@ -22,8 +23,10 @@ $(document).ready(function () {
     }
 
     function showEIM() {
+        if (modalCreated) return;
         $eim.modal({ backdrop: true, show: true });
         $form.validator().on('submit', sendWhitepaperRequest);
+        modalCreated = true;
     }
 
     function sendWhitepaperRequest(event) {
