@@ -18,6 +18,8 @@ $red: #ff2a2a;
 
 $headingFont: "Montserrat", sans-serif;
 $textFont: "Open Sans", sans-serif;
+$navbarHeight: 88px;
+$footerHeight: 173px;
 
 body, html, button, input, select, textarea, a, p, li, div {
     font-family: $textFont;
@@ -59,8 +61,6 @@ img.shadow {
 .flex-1 {
     flex: 1;
 }
-
-$navbarHeight: 88px;
 
 button.nav-toggler, button.nav-close {
     width: 25px;
@@ -351,7 +351,7 @@ $anchorHeight: $navbarHeight - 1;
 
 .sec-lp-1 {
     height: 100vh;
-    background: url("/assets/img/tnw_cover_01.jpg") no-repeat right bottom;
+    background: url("/assets/img/tnw_cover_01.jpg") no-repeat center bottom;
     background-size: cover;
     color: $white;
 
@@ -396,7 +396,7 @@ $anchorHeight: $navbarHeight - 1;
     .sec-lp-1 {
         .claim {
             h1 {
-                font-size: 28px;
+                font-size: 32px;
             }
 
             ul li {
@@ -410,7 +410,7 @@ $anchorHeight: $navbarHeight - 1;
     .sec-lp-1 {
         .claim {
             h1 {
-                font-size: 24px;
+                font-size: 28px;
             }
 
             ul li {
@@ -860,26 +860,36 @@ $anchorHeight: $navbarHeight - 1;
     }
 }
 
-.eim-modal {
-    .modal-dialog {
-        max-width: 800px;
+.sec-cta.cta-whitepaper {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+    color: $white;
+    background: $blueAsh;
+
+    .btn-cta {
+        background: $white;
+        border: 2px solid white;
     }
 
-    .modal-content {
-        border-radius: 0;
-        padding: 12px 24px;
+    .btn-cta:hover {
+        color: $white;
+        background: transparent;
+        border: 2px solid $white;
     }
+}
 
-    .modal-header {
-        border: none;
+.sec-whitepaper {
+    min-height: calc(100vh - #{$navbarHeight} - #{$footerHeight});
+    background: url("/assets/img/tnw_cover_12.jpg ") no-repeat right bottom;
+    background-size: cover;
+
+    .box {
+        margin: 5% 0;
+        height: 90%;
+        background: $white;
     }
+}
 
-    .modal-title {
-        font-family: $headingFont;
-        font-size: 30px;
-        font-weight: 600;
-    }
-
+.whitepaper-form {
     .btn-submit {
         font-size: 14px;
         font-weight: 700;
@@ -916,7 +926,29 @@ $anchorHeight: $navbarHeight - 1;
     }
 }
 
+.eim-modal {
+    .modal-dialog {
+        max-width: 800px;
+    }
+
+    .modal-content {
+        border-radius: 0;
+        padding: 12px 24px;
+    }
+
+    .modal-header {
+        border: none;
+    }
+
+    .modal-title {
+        font-family: $headingFont;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
 .footer {
+    min-height: $footerHeight;
     color: $white;
     background: $black;
     font-size: 14px;
@@ -934,6 +966,10 @@ $anchorHeight: $navbarHeight - 1;
     span.credit a, span.credit a:hover {
         color: $darkGray;
     }
+}
+
+.page {
+    margin-top: $navbarHeight;
 }
 
 .social-icon {

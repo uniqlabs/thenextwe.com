@@ -314,7 +314,7 @@ button.slick-arrow:hover {
 
 .sec-lp-1 {
   height: 100vh;
-  background: url("/assets/img/tnw_cover_01.jpg") no-repeat right bottom;
+  background: url("/assets/img/tnw_cover_01.jpg") no-repeat center bottom;
   background-size: cover;
   color: #fff;
 }
@@ -355,7 +355,7 @@ button.slick-arrow:hover {
 
 @media (max-width: 767px) {
   .sec-lp-1 .claim h1 {
-    font-size: 28px;
+    font-size: 32px;
   }
   .sec-lp-1 .claim ul li {
     font-size: 20px;
@@ -364,7 +364,7 @@ button.slick-arrow:hover {
 
 @media (max-width: 575px) {
   .sec-lp-1 .claim h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
   .sec-lp-1 .claim ul li {
     font-size: 18px;
@@ -788,6 +788,70 @@ button.slick-arrow:hover {
   color: #000;
 }
 
+.sec-cta.cta-whitepaper {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background: #90a4ae;
+}
+
+.sec-cta.cta-whitepaper .btn-cta {
+  background: #fff;
+  border: 2px solid white;
+}
+
+.sec-cta.cta-whitepaper .btn-cta:hover {
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.sec-whitepaper {
+  min-height: calc(100vh - 88px - 173px);
+  background: url("/assets/img/tnw_cover_12.jpg ") no-repeat right bottom;
+  background-size: cover;
+}
+
+.sec-whitepaper .box {
+  margin: 5% 0;
+  height: 90%;
+  background: #fff;
+}
+
+.whitepaper-form .btn-submit {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 24px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #90a4ae;
+  border: 2px solid #90a4ae;
+  opacity: 1 !important;
+}
+
+.whitepaper-form .btn-submit:hover {
+  color: #000;
+  background: transparent;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.whitepaper-form .form-group {
+  margin: 4px 0;
+}
+
+.whitepaper-form input, .whitepaper-form select {
+  font-size: 13px;
+}
+
+.whitepaper-form input {
+  padding: 12px 8px;
+}
+
+.whitepaper-form input:focus, .whitepaper-form select:focus {
+  border-color: #90a4ae;
+}
+
 .eim-modal .modal-dialog {
   max-width: 800px;
 }
@@ -807,42 +871,8 @@ button.slick-arrow:hover {
   font-weight: 600;
 }
 
-.eim-modal .btn-submit {
-  font-size: 14px;
-  font-weight: 700;
-  padding: 12px 24px;
-  margin-top: 8px;
-  text-transform: uppercase;
-  color: #fff;
-  background: #90a4ae;
-  border: 2px solid #90a4ae;
-  opacity: 1 !important;
-}
-
-.eim-modal .btn-submit:hover {
-  color: #000;
-  background: transparent;
-  border: 2px solid #000;
-  cursor: pointer;
-}
-
-.eim-modal .form-group {
-  margin: 4px 0;
-}
-
-.eim-modal input, .eim-modal select {
-  font-size: 13px;
-}
-
-.eim-modal input {
-  padding: 12px 8px;
-}
-
-.eim-modal input:focus, .eim-modal select:focus {
-  border-color: #90a4ae;
-}
-
 .footer {
+  min-height: 173px;
   color: #fff;
   background: #000;
   font-size: 14px;
@@ -860,6 +890,10 @@ button.slick-arrow:hover {
 
 .footer span.credit a, .footer span.credit a:hover {
   color: #444;
+}
+
+.page {
+  margin-top: 88px;
 }
 
 .social-icon {
