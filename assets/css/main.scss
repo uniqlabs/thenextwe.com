@@ -786,8 +786,10 @@ $anchorHeight: $navbarHeight - 1;
 .sec-cta.slim-contact {
     background: $white;
 
-    .bt {
-        border-top: 1px solid $silver;
+    .box {
+        background: $blueAsh;
+        padding: 15px;
+        color: $white;
     }
 
     p {

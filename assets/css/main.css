@@ -715,8 +715,10 @@ button.slick-arrow:hover {
   background: #fff;
 }
 
-.sec-cta.slim-contact .bt {
-  border-top: 1px solid #e5e5e5;
+.sec-cta.slim-contact .box {
+  background: #90a4ae;
+  padding: 15px;
+  color: #fff;
 }
 
 .sec-cta.slim-contact p {
