@@ -838,6 +838,15 @@ $anchorHeight: $navbarHeight - 1;
         border: 2px solid $black;
         color: $black;
     }
+
+    .alert {
+        background: $white;
+        border: none;
+    }
+
+    .with-errors ul li, div.with-errors {
+        color: $silver;
+    }
 }
 
 .sec-cta.cta-1 {
