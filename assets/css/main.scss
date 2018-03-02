@@ -50,7 +50,8 @@ button, input, select, .btn, .form-control {
 
 select {
     -webkit-appearance: none;
-    -webkit-border-radius: 0px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 }
 
 img.shadow {
@@ -350,10 +351,15 @@ $anchorHeight: $navbarHeight - 1;
 }
 
 .sec-lp-1 {
+    min-height: 700px;
     height: 100vh;
     background: url("/assets/img/tnw_cover_01.jpg") no-repeat center bottom;
     background-size: cover;
     color: $white;
+
+    .container {
+        padding-bottom: 120px;
+    }
 
     .claim {
         h1 {
@@ -784,7 +790,10 @@ $anchorHeight: $navbarHeight - 1;
 }
 
 .sec-cta.slim-contact {
-    background: $white;
+    position: relative;
+    top: -160px;
+    background: transparent;
+    margin-bottom: -240px;
 
     .box {
         background: $blueAsh;

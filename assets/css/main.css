@@ -29,7 +29,8 @@ button, input, select, .btn, .form-control {
 
 select {
   -webkit-appearance: none;
-  -webkit-border-radius: 0px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 img.shadow {
@@ -313,10 +314,15 @@ button.slick-arrow:hover {
 }
 
 .sec-lp-1 {
+  min-height: 700px;
   height: 100vh;
   background: url("/assets/img/tnw_cover_01.jpg") no-repeat center bottom;
   background-size: cover;
   color: #fff;
+}
+
+.sec-lp-1 .container {
+  padding-bottom: 120px;
 }
 
 .sec-lp-1 .claim h1 {
@@ -712,7 +718,10 @@ button.slick-arrow:hover {
 }
 
 .sec-cta.slim-contact {
-  background: #fff;
+  position: relative;
+  top: -160px;
+  background: transparent;
+  margin-bottom: -240px;
 }
 
 .sec-cta.slim-contact .box {
