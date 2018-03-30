@@ -1,1 +1,1 @@
-Sitemap: http://www.thenextwe.com/en/sitemap.xml
+Sitemap: https://www.thenextwe.com/en/sitemap.xml
