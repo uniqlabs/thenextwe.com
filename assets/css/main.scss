@@ -13,7 +13,8 @@ $blackShadow: rgba(0, 0, 0, 0.15);
 $black: #000;
 $yellow: #ffff02;
 $blueAsh: #90a4ae;
-$green: #37c871;
+$green: #37c883;
+$dGreen: #36a362;
 $red: #ff2a2a;
 
 $headingFont: "Montserrat", sans-serif;
@@ -52,6 +53,16 @@ select {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
     border-radius: 0;
+}
+
+a {
+    color: $green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $dGreen;
+    text-decoration: none;
 }
 
 img.shadow {
