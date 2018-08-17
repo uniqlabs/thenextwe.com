@@ -999,6 +999,36 @@ $anchorHeight: $navbarHeight - 1;
 
 .page {
     margin-top: $navbarHeight;
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        h1 {
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    }
 }
 
 .social-icon {
