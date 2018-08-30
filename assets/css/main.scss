@@ -955,6 +955,17 @@ $anchorHeight: $navbarHeight - 1;
     }
 }
 
+.sec-app {
+    min-height: calc(100vh - #{$navbarHeight} - #{$footerHeight});
+    height: calc(100vh - #{$navbarHeight} - #{$footerHeight});
+    background: url("/assets/img/tnw_cover_14.jpg ") no-repeat center center;
+    background-size: cover;
+    color: $white;
+    a.badge:hover {
+        transform: scale(1.01);
+    }
+}
+
 .eim-modal {
     .modal-dialog {
         max-width: 800px;
